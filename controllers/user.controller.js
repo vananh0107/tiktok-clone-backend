@@ -147,7 +147,6 @@ const updatePassword = async (req, res) => {
 };
 const updateImage = async (req, res) => {
   try {
-    console.log(req.user)
     const result = await cloudinaryUploadImage(req.file);
     const user = await userModel.findByIdAndUpdate(
       req.user.id,

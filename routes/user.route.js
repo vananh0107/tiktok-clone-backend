@@ -8,9 +8,6 @@ import tokenMiddleware from "../middlewares/token.middleware.js";
 import postController from "../controllers/post.controller.js";
 import multer from 'multer';
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'D:/Code/Vuejs/tiktok-clone-api/uploads')
-  },
   filename: function (req, file, cb) {
     var filetype = '';
     if (file.mimetype === 'image/png') {
